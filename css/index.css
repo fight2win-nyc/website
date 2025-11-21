@@ -1,42 +1,82 @@
-/* Defaults */
-:root {
-	--font-family: -apple-system, system-ui, sans-serif;
-	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
+/* fonts */
+
+@font-face {
+	font-family: "Lineal Black";
+	src: url('/fonts/Lineal-Black.woff') format('woff'),
 }
 
-/* Theme colors */
+@font-face {
+	font-family: "Compagnon";
+	src: url('/fonts/Compagnon-Roman.woff') format('woff'),
+}
+
+@font-face {
+	font-family: "Garamond";
+	src: url('/fonts/EBGaramond12-Regular.ttf') format('truetype')
+}
+
+@font-face {
+	font-family: "Karrik";
+	src: url('/fonts/Karrik-Regular.woff') format('woff')
+}
+
+@font-face {
+	font-family: "Director";
+	src: url('/fonts/Director-Light.woff') format('woff')
+}
+
+@font-face {
+	font-family: "Abordage";
+	src: url('/fonts/Abordage-Regular.woff') format('woff')
+}
+
+@font-face {
+	font-family: "VG5000";
+	src: url('/fonts/VG5000-Regular_web.woff') format('woff')
+}
+
+/* defaults */
+:root {
+	--header-font: "Lineal Black";
+	--second-header: "Karrik";
+	--font-family: -apple-system, system-ui, sans-serif;
+	--font-family-monospace: Courier New, "Compagnon", Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
+}
+
+/* colors */
 :root {
 	--color-gray-20: #e0e0e0;
 	--color-gray-50: #C0C0C0;
-	--color-gray-90: #333;
+	--color-gray-90: #282828;
 
-	--background-color: #fff;
+	--background-color: #fffbf3;
+	--main-color:#e1e1e1;
+	--the-red: #e30e18;
 
-	--text-color: var(--color-gray-90);
-	--text-color-link: #082840;
-	--text-color-link-active: #5f2b48;
+	--text-color: #0d0c0c;
+	--text-color-link: #000;
+	--text-color-link-active: #47010e;
 	--text-color-link-visited: #17050F;
 
 	--syntax-tab-size: 2;
 }
 
-@media (prefers-color-scheme: dark) {
+/* dark mode */
+/*@media (prefers-color-scheme: dark) {
 	:root {
 		--color-gray-20: #e0e0e0;
 		--color-gray-50: #C0C0C0;
 		--color-gray-90: #dad8d8;
-
-		/* --text-color is assigned to --color-gray-_ above */
 		--text-color-link: #1493fb;
 		--text-color-link-active: #6969f7;
 		--text-color-link-visited: #a6a6f8;
 
 		--background-color: #15202b;
 	}
-}
+}*/
 
 
-/* Global stylesheet */
+/* global stylesheet */
 * {
 	box-sizing: border-box;
 }
@@ -49,7 +89,7 @@ html,
 body {
 	padding: 0;
 	margin: 0 auto;
-	font-family: var(--font-family);
+	font-family: var(--font-family-monospace);
 	color: var(--text-color);
 	background-color: var(--background-color);
 }
@@ -57,7 +97,9 @@ html {
 	overflow-y: scroll;
 }
 body {
-	max-width: 40em;
+	max-width: 52em;
+	padding-right: 5px;
+	border-right: 1px solid Black;
 }
 
 /* https://www.a11yproject.com/posts/how-to-hide-content/ */
@@ -71,7 +113,7 @@ body {
 	width: 1px;
 }
 
-/* Fluid images via https://www.zachleat.com/web/fluid-images/ */
+/* fluid images via https://www.zachleat.com/web/fluid-images/ */
 img{
   max-width: 100%;
 }
@@ -82,6 +124,14 @@ img[src$=".svg"] {
   width: 100%;
   height: auto;
   max-width: none;
+}
+img.page {
+	filter: saturate(0);
+	border-radius: 3px;
+	border: 1px dotted Black;
+}
+img.page:hover {
+	filter: saturate(1);
 }
 video,
 iframe {
@@ -114,7 +164,26 @@ a[href]:active {
 	color: var(--text-color-link-active);
 }
 
-main,
+h1.home-header {
+	font-size: 6.2em;
+	margin-bottom: 8px;
+	font-family: var(--header-font);
+}
+
+h1, h2, h3, h4, h5 {
+	font-family: var(--second-header);
+	color: var(--color-gray-90);
+}
+
+h1 {
+	font-size:2.5em;
+	margin-bottom: 10px;
+}
+
+h3 { /*faq style list*/
+	font-size:1.5em;
+}
+
 footer {
 	padding: 1rem;
 }
@@ -122,8 +191,19 @@ main :first-child {
 	margin-top: 0;
 }
 
-header {
-	border-bottom: 1px dashed var(--color-gray-20);
+main {
+	padding: 3em;
+	padding-right: 10em;
+	margin-top: 5em;
+	background-color: var(--main-color);
+	min-height: 100vh;
+	box-shadow: -18px 15px var(--the-red);
+	border: 1px solid var(--the-red);
+	border-bottom: 0;
+}
+
+main p {
+	font-family: var(--font-family-monospace);
 }
 
 #skip-link {
@@ -199,6 +279,7 @@ header {
 	justify-content: space-between;
 	align-items: center;
 	padding: 1em;
+	padding-left: 0;
 }
 .home-link {
 	flex-grow: 1;
@@ -220,11 +301,19 @@ header {
 .nav-item {
 	display: inline-block;
 }
+.nav-item a {
+	font-family: "Courier New", monospace;
+}
+.nav-item a[href]:hover {
+	text-decoration: none;
+	border-bottom: 1px solid var(--the-red);
+}
 .nav-item a[href]:not(:hover) {
 	text-decoration: none;
 }
 .nav a[href][aria-current="page"] {
-	text-decoration: underline;
+	/*text-decoration: underline;*/
+	border-bottom: 1px solid var(--the-red);
 }
 
 /* Posts list */
@@ -258,14 +347,13 @@ header {
 	word-spacing: -0.5px;
 }
 .postlist-link {
-	font-size: 1.1875em; /* 19px /16 */
-	font-weight: 700;
+	font-family: var(--second-header);
+	font-size: 1.4em; /* 19px /16 */
+	font-weight: 500;
+	letter-spacing: 1px;
 	flex-basis: calc(100% - 1.5rem);
 	padding-left: .25em;
 	padding-right: .5em;
-	text-underline-position: from-font;
-	text-underline-offset: 0;
-	text-decoration-thickness: 1px;
 }
 .postlist-item-active .postlist-link {
 	font-weight: bold;
@@ -276,8 +364,7 @@ header {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	text-transform: capitalize;
-	font-style: italic;
+	text-transform: uppercase;
 }
 .postlist-item > .post-tag {
 	align-self: center;
@@ -296,3 +383,19 @@ header {
 	margin-right: 1em;
 }
 
+/* mobile+responsive */
+
+@media only screen and (max-width: 900px) {
+	body {
+		max-width: 95%;
+		margin: auto;
+		margin-left: 20px;
+	}
+	main {
+		margin-top: 20px;
+		padding-right: 3em;
+	}
+	h1.home-header {
+		font-size: 4em;
+	}
+}

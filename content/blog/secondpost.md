@@ -1,16 +1,15 @@
 ---
-title: This is my second post with a much longer title.
 description: This is a post on My Blog about leveraging agile frameworks.
-date: 2018-07-04
-tags: number 2
+title: This is my second post with a much longer title.
+date: 2019-07-02T00:00:00.000Z
+tags:
+  - another tag
 ---
-Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pharetra tristique dolor eget posuere. Suspendisse ornare ligula eu pharetra maximus. Sed pretium condimentum sem et dictum. Nunc erat purus, mattis eu convallis non, faucibus non velit. Sed eu neque eget orci consectetur suscipit ac nec dolor. In tincidunt nibh vitae ligula viverra, sit amet efficitur urna hendrerit. Etiam ut urna vehicula, luctus metus ut, ornare est. Nam gravida sollicitudin dolor, nec placerat nisi venenatis sed. Mauris sit amet luctus leo.
+
+Suspendisse accumsan neque ac lorem vestibulum, a suscipit mi sollicitudin. Fusce sed dignissim ante, vel euismod ex. Nulla hendrerit sem urna, a tristique diam mattis eu. Morbi in nibh vel urna tincidunt mattis eget volutpat velit. Maecenas sed ipsum tempor, mattis nibh eu, elementum tellus. Suspendisse elementum ante at magna fermentum pellentesque. Proin eget est scelerisque, hendrerit nibh nec, ultrices arcu. Mauris eget posuere purus.
 
 ## Section Header
 
-<a href="/blog/firstpost.md">First post</a>
-<a href="blog/thirdpost.md">Third post</a>
-
-Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.
-
-Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.
+Proin eget est scelerisque, hendrerit nibh nec, ultrices arcu. Mauris eget posuere purus.
