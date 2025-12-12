@@ -18,7 +18,7 @@ A caucus is a group of like-minded union members who work together towards commo
 * **A CUNY:**
   * led by its students and all workers, not provosts or politicians
   * that is free and fully-funded
-  * where our wages beat inflation and keep up with the city’s cost of living
+  * where our wages [beat inflation](https://docs.google.com/presentation/d/14bBDPKVkpRnXn6L4GUw2xs-SP8x6H_biAfWEkWGwDtA/edit?slide=id.p#slide=id.p) and keep up with the city’s cost of living
   * where adjuncts have job security and fair wages
   * where HEOs are shown the respect they deserve
   * where academic freedom and our right to assembly are protected
